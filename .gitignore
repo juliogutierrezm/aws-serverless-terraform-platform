@@ -1,0 +1,21 @@
+# Terraform state files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+.terraform.lock.hcl
+
+# Node
+
+node_modules/
+npm-debug.log
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Environment
+.env
