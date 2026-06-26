@@ -23,3 +23,8 @@ variable "environment" {
     error_message = "Environment must be one of: dev, staging, prod."
   }
 }
+variable "owner" {
+  description = "Owner of the resources"
+  type        = string
+  default     = "Julio Gutierrez"
+}

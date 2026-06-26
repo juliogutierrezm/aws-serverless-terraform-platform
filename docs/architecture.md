@@ -1,31 +1,20 @@
-# Architecture Notes
+## v1.2 - Remote State
 
-## Current Stage: v1.1 - Terraform Foundation
+In this stage, the project was updated to use an S3 backend for Terraform remote state.
 
-At this stage, the project creates a basic AWS S3 bucket using Terraform.
+### Why remote state?
 
-## Why S3 first?
+Remote state allows Terraform to store infrastructure state outside the local machine. This makes the project closer to a real-world workflow because the state is centralized and can be shared safely across environments or team members.
 
-S3 is a simple AWS resource that allows us to practice the Terraform workflow without introducing too much complexity. It helps us understand providers, variables, locals, tags, outputs, data sources, state, and basic AWS resource management.
+### Bootstrap
 
-## Concepts Practiced
+The `infra/bootstrap` directory creates the S3 bucket used by Terraform to store the remote state.
 
-- AWS provider configuration
-- Input variables
-- Variable validation
-- Local values
-- Common tags
-- Data sources
-- Outputs
-- Terraform state inspection
+### Dev Environment
 
-## Current Resources
+The `infra/environments/dev` directory uses the S3 backend and manages the application infrastructure.
 
-- S3 bucket for application/project storage
+### Current Resources
 
-## Next Steps
-
-- Add remote state using S3
-- Add DynamoDB lock table
-- Add Lambda function
-- Add API Gateway
+- S3 bucket for Terraform remote state
+- S3 bucket for application/project usage

@@ -22,3 +22,8 @@ output "common_tags" {
   description = "Common tags applied to all resources"
   value       = local.common_tags
 }
+
+output "app_bucket_domain_name" {
+description = "This is the domain name for bucket"
+value 	=  aws_s3_bucket.app_bucket.bucket_domain_name
+}

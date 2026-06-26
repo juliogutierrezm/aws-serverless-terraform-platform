@@ -7,7 +7,8 @@ locals {
     Project     = var.project_name
     Environment = var.environment
     ManagedBy   = "Terraform"
-    Owner       = "Julio Gutierrez"
+    Owner       = var.owner
+    Repository  = "aws-serverless-terraform-platform"
   }
 }
 
